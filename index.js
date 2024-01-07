@@ -7,6 +7,7 @@ import {router as productRoute} from './routers/productRoute.js';
 const app = express();
 config()
 
+
 const port = process.env.PORT || 2006;
 app.use(bodyParser.urlencoded({ extended: true, limit: "100mb" }));
 app.use(express.json());
@@ -16,9 +17,8 @@ mongoose.connect(process.env.MONGOURL)
     .then(() => console.log("Database Connected."))
     .catch(() => console.log("Database Not Connected."))
 
-
-app.get("/", (req, res) => {
-    res.json({ Test: "Testinggg......" })
+app.get("/" , (req, res) => {
+    res.send("Hello World")
 })
 
 

@@ -1,6 +1,7 @@
 import mongoose, { Schema, SchemaType } from "mongoose"
 
 const productSchema = Schema({
+    
     title: {
         type: String,
         required: true
@@ -43,5 +44,10 @@ const productSchema = Schema({
         required: true
     },
 })
+
+
+
+
+
 
 export const Product = mongoose.model("Product", productSchema)
